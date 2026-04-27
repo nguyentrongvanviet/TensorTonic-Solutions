@@ -8,5 +8,6 @@ def manhattan_distance(x, y):
     # Write code here
     x = np.asarray(x) 
     y = np.asarray(y) 
+    return np.linalg.norm(x-y,ord=1)
     return float(np.sum(abs(x-y)))
     pass
