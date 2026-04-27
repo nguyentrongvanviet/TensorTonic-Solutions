@@ -6,6 +6,9 @@ def cosine_similarity(a, b):
     Returns: float in [-1, 1]
     """
         # Write code here
-    ok = np.linalg.norm(a)*np.linalg.norm(b)
-    return np.array(a)@np.array(b).T/((np.linalg.norm(a)*np.linalg.norm(b))) if ok else 0 
-    pass
+    a = np.asarray(a) 
+    b = np.asarray(b) 
+    lena = np.linalg.norm(a) 
+    lenb = np.linalg.norm(b) 
+    if lena ==0 or lenb == 0 : return 0 
+    return a.dot(b)/(lena*lenb) 
