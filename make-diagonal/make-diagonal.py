@@ -7,5 +7,6 @@ def make_diagonal(v):
     # Write code here
     data = np.zeros(shape=(len(v),len(v))) 
     for i in range(len(v)): 
-        data[i][i] = v[i] 
+        data[i,i] = v[i] 
     return data 
+    
